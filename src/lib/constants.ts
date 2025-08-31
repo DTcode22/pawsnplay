@@ -21,8 +21,8 @@ export const NAVIGATION_ITEMS = [
       { name: 'Reviews', href: '#reviews' },
     ],
   },
-  { name: 'Gallery', href: '#gallery', hasDropdown: false },
-  { name: 'Blog', href: '#blog', hasDropdown: false },
+  { name: 'Shop', href: '#shop', hasDropdown: false },
+  { name: 'Blog', href: '#video', hasDropdown: false },
   { name: 'Contact', href: '#contact', hasDropdown: false },
 ];
 
@@ -31,6 +31,54 @@ export const BRAND = {
   logo: '🐾',
   tagline: "Your Pet's Best Friend",
 };
+
+export const ALL_PRODUCTS = [
+  {
+    name: 'Gourmet Salmon Bites',
+    category: 'Cats',
+    image: '/images/shop/cat1.png',
+  },
+  {
+    name: 'Organic Beef Chunks',
+    category: 'Dogs',
+    image: '/images/shop/organic-beef-chunks.jpg',
+  },
+  {
+    name: 'Arctic Krill Flakes',
+    category: 'Fish',
+    image: '/images/shop/arctic-krill-flakes.jpg',
+  },
+  {
+    name: 'Plush Feather Wand',
+    category: 'Cats',
+    image: '/images/shop/plush-feather-wand.jpg',
+  },
+  {
+    name: 'Durable Chew Toy',
+    category: 'Dogs',
+    image: '/images/shop/durable-chew-toy.jpg',
+  },
+  {
+    name: 'Sunny Seed Mix',
+    category: 'Birds',
+    image: '/images/shop/sunny-seed-mix.jpg',
+  },
+  {
+    name: 'Silent Spinner Wheel',
+    category: 'Random',
+    image: '/images/shop/silent-spinner-wheel.jpg',
+  },
+  {
+    name: 'Cozy Cat Tree',
+    category: 'Cats',
+    image: '/images/shop/cozy-cat-tree.jpg',
+  },
+  {
+    name: 'Tough Rope Tug',
+    category: 'Dogs',
+    image: '/images/shop/tough-rope-tug.jpg',
+  },
+];
 
 // Animation variants
 export const ANIMATION_VARIANTS = {
