@@ -14,7 +14,7 @@ const VideoSection = () => {
   return (
     <>
       <section id="video" className="py-24 bg-white">
-        <Container>
+        <Container size="custom">
           <div className="border-b-2 border-gray-200 pb-4 mb-16">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-4">

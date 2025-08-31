@@ -47,7 +47,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col justify-center items-center h-20">
-        <div className="flex justify-between items-center w-full max-w-[1280px] px-8">
+        <div className="flex justify-between items-center w-full max-w-[1440px] px-8">
           {/* Logo */}
           <motion.div
             className="flex items-center gap-3 cursor-pointer"

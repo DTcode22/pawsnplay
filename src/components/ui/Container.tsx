@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 interface ContainerProps {
   children: ReactNode;
   className?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'custom' | 'full';
 }
 
 export const Container = ({
@@ -17,12 +17,11 @@ export const Container = ({
     md: 'max-w-4xl',
     lg: 'max-w-6xl',
     xl: 'max-w-7xl',
+    custom: 'max-w-[1440px]',
     full: 'max-w-full',
   };
 
   return (
-    <div className={cn('mx-auto px-4 sm:px-6 lg:px-8', sizes[size], className)}>
-      {children}
-    </div>
+    <div className={cn('mx-auto', sizes[size], className)}>{children}</div>
   );
 };

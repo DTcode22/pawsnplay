@@ -33,7 +33,7 @@ const FeaturedProductsSection = () => {
 
   return (
     <section id="shop" className="py-24 bg-gray-50">
-      <Container>
+      <Container size="custom">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
