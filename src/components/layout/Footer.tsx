@@ -30,7 +30,7 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <Container size="xl" className="py-16">
+      <Container size="custom" className="py-16">
         {/* Newsletter Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pb-12 border-b border-white/20">
           <div>
