@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 
@@ -34,9 +33,10 @@ const AboutSection = () => {
                 curated.
               </p>
               <p>
-                At Paws n’ Play, customer satisfaction isn't just a goal – it's
-                our guiding principle. We go above and beyond to ensure every
-                interaction leaves tails wagging and hearts smiling.
+                At Paws n&apos; Play, customer satisfaction isn&apos;t just a
+                goal – it&apos;s our guiding principle. We go above and beyond
+                to ensure every interaction leaves tails wagging and hearts
+                smiling.
               </p>
               <p>
                 Join us in our mission to create a world where every pet is
