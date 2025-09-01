@@ -1,4 +1,4 @@
-import type { ServiceItem, TeamMember } from '@/types';
+import type { ServiceItem, TeamMember, RichTextContent } from '@/types';
 
 export const ALL_SERVICES: ServiceItem[] = [
   {
@@ -61,3 +61,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
 ];
+export const RICH_TEXT_CONTENT: RichTextContent = {
+  mainHeading: 'A Tale of Wagging Tails and Happy Paws',
+  mainParagraph:
+    "Our journey began with a simple yet profound love for animals. Inspired by the unwavering companionship and joy they bring to our lives, we embarked on a mission to create a haven where pets and their owners alike could experience unparalleled happiness and care. We're dedicated to fostering a community that celebrates the bond between pets and their human companions.",
+  subHeading: 'Our Commitment to Quality',
+  subParagraph:
+    'Driven by our passion for animal welfare, we hand-select each product and service with meticulous attention to quality and sustainability. From nutritious food and enriching toys to expert grooming and healthcare, every offering is carefully curated to meet the unique needs of our beloved furry friends.',
+};

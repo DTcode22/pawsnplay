@@ -44,3 +44,10 @@ export interface TeamMember {
   image: string;
   socials: SocialLink[];
 }
+
+export interface RichTextContent {
+  mainHeading: string;
+  mainParagraph: string;
+  subHeading: string;
+  subParagraph: string;
+}

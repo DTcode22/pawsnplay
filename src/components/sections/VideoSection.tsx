@@ -2,72 +2,79 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PlayCircle } from 'lucide-react';
-import { Container } from '../ui/Container';
-import { ScrollReveal } from '../animations/ScrollReveal';
-import { VideoModal } from '../ui/VideoModal';
+import { Play } from 'lucide-react';
+import { Container } from '@/components/ui/Container';
+import { ScrollReveal } from '@/components/animations/ScrollReveal';
+import { VideoModal } from '@/components/ui/VideoModal';
+import { RICH_TEXT_CONTENT } from '@/lib/data';
 
 const VideoSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const YOUTUBE_VIDEO_ID = 'e_2k4p3t9bQ'; // A cute pet video from YouTube
+  const YOUTUBE_VIDEO_ID = '7P4OxUN4Jd0';
 
   return (
     <>
-      <section id="video" className="py-24 bg-white">
+      <section id="blog" className="py-24 bg-white">
         <Container size="custom">
-          <div className="border-b-2 border-gray-200 pb-4 mb-16">
+          <div className="border-b border-black/20 pb-4 mb-16">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-4">
-                <span className="text-2xl">🐾</span> Our Story
+              <h2 className="text-4xl font-medium text-slate-900 flex items-center gap-4">
+                <span className="text-3xl">🐾</span> Blog
               </h2>
             </ScrollReveal>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal
-              direction="left"
-              className="prose prose-lg text-gray-600 max-w-none"
-            >
-              <h3 className="text-3xl font-semibold text-gray-900">
-                A Tale of Wagging Tails
-              </h3>
-              <p>
-                Discover the heart and soul behind Paws n&apos;Play. Our journey
-                is one of passion, dedication, and an endless love for animals.
-                Watch our story to see how a small dream grew into a thriving
-                community for pet lovers everywhere.
-              </p>
-              <p>
-                We believe every pet deserves the best. From our carefully
-                selected products to our compassionate services, every aspect of
-                Paws n&apos; Play is designed to enrich the lives of pets and
-                their families.
-              </p>
-              <motion.button
-                onClick={() => setIsModalOpen(true)}
-                className="mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded-full"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Watch Video
-              </motion.button>
-            </ScrollReveal>
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="w-full lg:w-1/2 flex flex-col gap-10">
+              <ScrollReveal>
+                <h3 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                  {RICH_TEXT_CONTENT.mainHeading}
+                </h3>
+              </ScrollReveal>
 
-            <ScrollReveal direction="right">
-              <motion.div
-                className="relative rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+              <div className="prose prose-xl text-gray-600 max-w-none space-y-8">
+                <ScrollReveal delay={0.1}>
+                  <p>{RICH_TEXT_CONTENT.mainParagraph}</p>
+                </ScrollReveal>
+                <ScrollReveal delay={0.2}>
+                  <h4 className="text-2xl font-semibold text-gray-900">
+                    {RICH_TEXT_CONTENT.subHeading}
+                  </h4>
+                  <p>{RICH_TEXT_CONTENT.subParagraph}</p>
+                </ScrollReveal>
+              </div>
+
+              <ScrollReveal delay={0.3}>
+                <motion.button
+                  className="px-6 py-4 bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold text-lg rounded-lg shadow-md"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Read more
+                </motion.button>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal className="w-full lg:w-1/2">
+              <div
+                className="h-[400px] sm:h-[600px] relative rounded-lg overflow-hidden cursor-pointer group"
                 onClick={() => setIsModalOpen(true)}
-                whileHover={{ scale: 1.03 }}
               >
                 <img
-                  src="/images/video-thumbnail.png"
-                  alt="Video thumbnail of a happy dog"
-                  className="w-full h-auto"
+                  src="/images/thumbnail.jpg"
+                  alt="Happy dog looking up"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <PlayCircle className="w-20 h-20 text-white/80" />
+                <div className="absolute inset-0 bg-black/30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/40 transition-colors">
+                    <Play
+                      className="w-12 h-12 sm:w-20 sm:h-20 text-white"
+                      fill="currentColor"
+                    />
+                  </div>
                 </div>
-              </motion.div>
+              </div>
             </ScrollReveal>
           </div>
         </Container>

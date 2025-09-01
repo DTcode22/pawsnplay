@@ -28,7 +28,7 @@ export const VideoModal = ({ isOpen, onClose, videoId }: VideoModalProps) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the video
+            onClick={(e) => e.stopPropagation()}
           >
             <motion.button
               className="absolute -top-3 -right-3 z-10 w-9 h-9 bg-white text-gray-800 rounded-full flex items-center justify-center"
@@ -40,7 +40,7 @@ export const VideoModal = ({ isOpen, onClose, videoId }: VideoModalProps) => {
             </motion.button>
             <iframe
               className="w-full h-full rounded-lg"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
