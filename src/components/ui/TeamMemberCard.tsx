@@ -27,7 +27,11 @@ const SocialIcon = ({ social }: { social: SocialLink }) => {
 
 export const TeamMemberCard = ({ member }: { member: TeamMember }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <motion.div
+      className="flex flex-col gap-6"
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
+    >
       <div className="relative w-full aspect-[4/5] overflow-hidden">
         <Image
           src={member.image}
@@ -50,6 +54,6 @@ export const TeamMemberCard = ({ member }: { member: TeamMember }) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

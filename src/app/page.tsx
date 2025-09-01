@@ -6,7 +6,6 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/HeroSection';
 import { LoadingScreen } from '@/components/animations/LoadingScreen';
-import { ScrollProgress } from '@/components/animations/ScrollProgress';
 import FeaturedProductsSection from '@/components/sections/FeaturedProductsSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -36,7 +35,6 @@ export default function Home() {
       transition={{ duration: 0.5 }}
       className="relative"
     >
-      <ScrollProgress />
       <Navbar />
       <Hero />
       <FeaturedProductsSection />

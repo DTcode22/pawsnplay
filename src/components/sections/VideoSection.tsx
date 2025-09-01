@@ -47,7 +47,7 @@ const VideoSection = () => {
 
               <ScrollReveal delay={0.3}>
                 <motion.button
-                  className="px-6 py-4 bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold text-lg rounded-lg shadow-md"
+                  className="px-6 py-4 bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold text-lg rounded-lg cursor-pointer shadow-md"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

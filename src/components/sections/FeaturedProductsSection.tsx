@@ -47,41 +47,43 @@ const FeaturedProductsSection = () => {
   return (
     <section id="shop" className="py-24 bg-gray-50">
       <Container size="custom">
-        <ScrollReveal>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Featured Products
-            </h2>
-            <div className="w-full max-w-md md:w-auto grid grid-cols-6 md:flex md:flex-wrap md:justify-center items-center gap-2 p-2 bg-gray-200/70 rounded-2xl">
-              {categories.map((cat, index) => (
-                <motion.button
-                  key={cat}
-                  onClick={() => handleCategoryChange(cat)}
-                  className={`relative w-full md:w-auto px-4 py-3 text-sm font-semibold rounded-xl transition-colors md:col-span-auto ${
-                    index < 3 ? 'col-span-2' : 'col-span-3'
-                  } ${
-                    activeCategory === cat
-                      ? 'text-white'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  {activeCategory === cat && (
-                    <motion.div
-                      layoutId="category-pill"
-                      className="absolute inset-0 bg-gradient-to-r from-[#101828] to-[#233250] rounded-xl"
-                      transition={{
-                        type: 'spring',
-                        stiffness: 300,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                  <span className="relative z-10">{cat}</span>
-                </motion.button>
-              ))}
+        <div className="border-b border-black/20 pb-4 mb-12">
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <h2 className="text-4xl font-medium text-slate-900 flex items-center gap-4">
+                <span className="text-3xl">🐾</span> Featured Products
+              </h2>
+              <div className="w-full max-w-md md:w-auto grid grid-cols-6 md:flex md:flex-wrap md:justify-center items-center gap-2 p-2 bg-gray-200/70 rounded-2xl">
+                {categories.map((cat, index) => (
+                  <motion.button
+                    key={cat}
+                    onClick={() => handleCategoryChange(cat)}
+                    className={`relative w-full md:w-auto px-4 py-3 text-sm font-semibold rounded-xl transition-colors md:col-span-auto ${
+                      index < 3 ? 'col-span-2' : 'col-span-3'
+                    } ${
+                      activeCategory === cat
+                        ? 'text-white'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    {activeCategory === cat && (
+                      <motion.div
+                        layoutId="category-pill"
+                        className="absolute inset-0 bg-gradient-to-r from-[#101828] to-[#233250] rounded-xl"
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                    <span className="relative z-10">{cat}</span>
+                  </motion.button>
+                ))}
+              </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProducts.length > 0 ? (

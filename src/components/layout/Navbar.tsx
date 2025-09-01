@@ -130,9 +130,9 @@ const Navbar = () => {
           </nav>
 
           <motion.button
-            className={`hidden lg:flex items-center justify-center px-5 py-2.5 text-base font-semibold rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm ${
+            className={`hidden lg:flex items-center justify-center px-5 py-2.5 text-base font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer active:scale-95 shadow-sm ${
               isScrolled
-                ? 'bg-gray-900 text-white hover:bg-gray-800'
+                ? 'bg-sky-950/95 text-white hover:bg-sky-950'
                 : 'bg-white text-gray-900 hover:bg-gray-100'
             }`}
             whileHover={{ scale: 1.05 }}
@@ -165,7 +165,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0 }}
             >
               <div className="px-4 py-6 space-y-4">
                 {navItems.map((item) => (

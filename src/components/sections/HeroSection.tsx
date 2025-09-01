@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Container } from '../ui/Container';
@@ -8,16 +8,28 @@ import Image from 'next/image';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <section className="relative w-full h-[100vh] overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-dog-cropped2.webp"
+          src="/images/hero-dog.webp"
           alt="Happy dog sitting in a field"
           fill
           priority
@@ -26,7 +38,7 @@ const Hero = () => {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -129,7 +141,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
             >
               <motion.button
-                className="group relative flex items-center justify-center gap-3 px-7 py-4 bg-transparent border-2 border-white text-white font-semibold text-lg rounded-full transition-all duration-300 overflow-hidden hover:bg-white hover:text-gray-900 hover:border-white hover:shadow-2xl"
+                className="group relative flex cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full border-2 border-white bg-transparent px-7 py-4 text-lg font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-gray-900 hover:shadow-2xl"
                 style={{ fontFamily: 'Inter, sans-serif' }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -141,7 +153,7 @@ const Hero = () => {
                   transition={{ duration: 0.3 }}
                   style={{ borderRadius: '50px' }}
                 />
-                <span className="relative z-10 group-hover:text-gray-900 transition-colors duration-300">
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-gray-900 cursor-pointer">
                   Get Started
                 </span>
                 <motion.div
@@ -166,41 +178,41 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="flex items-center gap-6 mt-8"
+              className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <motion.button
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300"
+                className="flex items-center gap-2 text-white/80 transition-colors duration-300 hover:text-white"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <motion.div
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm cursor-pointer"
                   whileHover={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Play className="w-5 h-5 ml-1" fill="currentColor" />
+                  <Play className="ml-1 h-5 w-5" fill="currentColor" />
                 </motion.div>
                 <span className="font-medium">Watch Our Story</span>
               </motion.button>
 
               <motion.div
-                className="h-8 w-px bg-white/30"
+                className="hidden h-8 w-px bg-white/30 sm:block"
                 initial={{ scaleY: 0 }}
                 animate={{ scaleY: 1 }}
                 transition={{ duration: 0.5, delay: 1.4 }}
               />
 
               <motion.div
-                className="text-white/60 text-sm"
+                className="text-sm text-white/60"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
                 <div className="font-medium">Trusted by 10,000+ pet owners</div>
-                <div className="flex items-center gap-1 mt-1">
+                <div className="mt-1 flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <motion.span
                       key={i}
@@ -220,32 +232,39 @@ const Hero = () => {
         </motion.div>
       </Container>
 
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2 }}
-      >
-        <motion.div
-          className="flex flex-col items-center text-white/60 cursor-pointer hover:text-white/80 transition-colors duration-300"
-          onClick={() => {
-            const nextSection = document.querySelector('#shop');
-            nextSection?.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          <span className="text-sm font-medium mb-2">Scroll to explore</span>
+      <AnimatePresence>
+        {showScrollIndicator && (
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 transform"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
           >
-            <ArrowRight className="w-5 h-5 rotate-90" />
+            <motion.div
+              className="flex cursor-pointer flex-col items-center text-white/60 transition-colors duration-300 hover:text-white/80"
+              onClick={() => {
+                const nextSection = document.querySelector('#shop');
+                nextSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="mb-2 text-sm font-medium">
+                Scroll to explore
+              </span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              >
+                <ArrowRight className="h-5 w-5 rotate-90" />
+              </motion.div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

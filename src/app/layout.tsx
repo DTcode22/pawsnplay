@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Paws n' Play",
     images: [
       {
-        url: '/hero-dog-image.webp',
+        url: '/hero-dog.webp',
         width: 1200,
         height: 630,
         alt: "Paws n' Play - Pet Care Services",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Paws n' Play - Premium Pet Care",
     description: 'A Pets Dream',
-    images: ['/hero-dog-image.webp'],
+    images: ['/hero-dog.webp'],
   },
   robots: {
     index: true,

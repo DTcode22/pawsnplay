@@ -17,7 +17,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-16 items-center">
-          <ScrollReveal direction="left">
+          <ScrollReveal>
             <div className="prose prose-xl text-slate-800 max-w-none space-y-6">
               <p>
                 At Paws n’ Play, our journey began with a simple yet profound
@@ -48,7 +48,7 @@ const AboutSection = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal direction="right">
+          <ScrollReveal delay={0.2}>
             <div className="relative h-[550px] w-full">
               <div className="absolute top-0 left-[15%] w-[85%] h-[90%] rounded-xl shadow-2xl overflow-hidden">
                 <Image
@@ -59,7 +59,7 @@ const AboutSection = () => {
                   sizes="(max-width: 1024px) 85vw, 42.5vw"
                 />
               </div>
-              <div className="absolute z-10 bottom-0 left-0 w-[36%] rounded-2xl shadow-2xl overflow-hidden border-12 border-white">
+              <div className="absolute z-10 bottom-0 left-0 sm:w-[36%] w-[50%] h-[36%] rounded-2xl shadow-2xl overflow-hidden border-12 border-white">
                 <Image
                   src="/images/about/about2.webp"
                   alt="A chew toy for pets"

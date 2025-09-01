@@ -45,7 +45,7 @@ const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <ScrollReveal direction="left" className="flex flex-col gap-12">
+          <ScrollReveal className="flex flex-col gap-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {contactInfo.map((item, index) => (
                 <motion.div
@@ -69,7 +69,7 @@ const ContactSection = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal direction="right">
+          <ScrollReveal delay={0.2}>
             <div className="bg-white p-8 rounded-2xl shadow-2xl">
               <form action="#" method="POST" className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
