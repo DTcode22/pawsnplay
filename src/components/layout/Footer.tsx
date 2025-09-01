@@ -32,7 +32,7 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 py-16">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 pr-8">
             <div className="flex items-center gap-3">
               <div className="text-2xl">🐾</div>
