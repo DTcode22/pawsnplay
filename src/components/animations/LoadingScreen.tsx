@@ -28,7 +28,6 @@ export const LoadingScreen = () => {
       transition={{ duration: 0.5, delay: progress >= 100 ? 0.5 : 0 }}
     >
       <div className="text-center">
-        {/* Logo Animation */}
         <motion.div
           className="mb-8"
           initial={{ scale: 0.5, opacity: 0 }}
@@ -55,11 +54,10 @@ export const LoadingScreen = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Paws &apos; Play
+            Paws n&apos; Play
           </motion.h1>
         </motion.div>
 
-        {/* Progress Bar */}
         <div className="w-64 mx-auto">
           <motion.div
             className="h-1 bg-white/20 rounded-full overflow-hidden"

@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/ui/Container';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
+import Image from 'next/image';
 
 const AboutSection = () => {
   return (
@@ -50,17 +51,21 @@ const AboutSection = () => {
           <ScrollReveal direction="right">
             <div className="relative h-[550px] w-full">
               <div className="absolute top-0 left-[15%] w-[85%] h-[90%] rounded-xl shadow-2xl overflow-hidden">
-                <img
-                  src="/images/about/about1.png"
+                <Image
+                  src="/images/about/about1.webp"
                   alt="A delicious looking bowl of pet food"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 85vw, 42.5vw"
                 />
               </div>
               <div className="absolute z-10 bottom-0 left-0 w-[36%] rounded-2xl shadow-2xl overflow-hidden border-12 border-white">
-                <img
-                  src="/images/about/about2.png"
+                <Image
+                  src="/images/about/about2.webp"
                   alt="A chew toy for pets"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 36vw, 18vw"
                 />
               </div>
             </div>

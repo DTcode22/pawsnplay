@@ -48,7 +48,6 @@ const Navbar = () => {
     >
       <div className="flex flex-col justify-center items-center h-20">
         <div className="flex justify-between items-center w-full max-w-[1440px] px-8">
-          {/* Logo */}
           <motion.div
             className="flex items-center gap-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -64,7 +63,6 @@ const Navbar = () => {
             </span>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
@@ -102,7 +100,6 @@ const Navbar = () => {
                   </motion.a>
                 )}
 
-                {/* Dropdown Menu */}
                 <AnimatePresence>
                   {item.hasDropdown && activeDropdown === item.name && (
                     <motion.div
@@ -132,7 +129,6 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <motion.button
             className={`hidden lg:flex items-center justify-center px-5 py-2.5 text-base font-semibold rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm ${
               isScrolled
@@ -145,7 +141,6 @@ const Navbar = () => {
             Book Service
           </motion.button>
 
-          {/* Mobile Menu Button */}
           <motion.button
             className={`lg:hidden p-2 rounded-md transition-colors duration-300 ${
               isScrolled
@@ -163,7 +158,6 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div

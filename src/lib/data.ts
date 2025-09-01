@@ -17,30 +17,30 @@ import type {
 export const ALL_SERVICES: ServiceItem[] = [
   {
     name: 'Grooming',
-    image: '/images/services/service2.png',
+    image: '/images/services/service2.webp',
   },
   {
     name: 'Boarding',
-    image: '/images/services/service3.png',
+    image: '/images/services/service3.webp',
   },
   {
     name: 'Veterinary',
-    image: '/images/services/service4.png',
+    image: '/images/services/service4.webp',
   },
   {
     name: 'Training',
-    image: '/images/services/service1.png',
+    image: '/images/services/service1.webp',
   },
   {
     name: 'Adoption',
-    image: '/images/services/service5.png',
+    image: '/images/services/service5.webp',
   },
 ];
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Olivia Rhye',
     role: 'Founder & CEO',
-    image: '/images/team/member1.jpg',
+    image: '/images/team/member1.webp',
     socials: [
       { platform: 'twitter', href: '#' },
       { platform: 'linkedin', href: '#' },
@@ -49,7 +49,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Phoenix Baker',
     role: 'Head of Grooming',
-    image: '/images/team/member2.jpg',
+    image: '/images/team/member2.webp',
     socials: [
       { platform: 'twitter', href: '#' },
       { platform: 'linkedin', href: '#' },
@@ -58,7 +58,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Lana Steiner',
     role: 'Lead Veterinarian',
-    image: '/images/team/member3.jpg',
+    image: '/images/team/member3.webp',
     socials: [
       { platform: 'twitter', href: '#' },
       { platform: 'linkedin', href: '#' },
@@ -68,7 +68,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: 'Demi Wilkinson',
     role: 'Community Manager',
-    image: '/images/team/member4.jpg',
+    image: '/images/team/member4.webp',
     socials: [
       { platform: 'twitter', href: '#' },
       { platform: 'linkedin', href: '#' },

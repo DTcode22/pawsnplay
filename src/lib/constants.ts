@@ -37,7 +37,7 @@ export const ALL_PRODUCTS = [
     id: 1,
     name: 'Gourmet Salmon Bites',
     category: 'Cats',
-    image: '/images/shop/cat1.png',
+    image: '/images/shop/cat1.webp',
     price: '15.99',
     description: 'Premium, grain-free salmon bites for a shiny coat.',
   },
@@ -45,7 +45,7 @@ export const ALL_PRODUCTS = [
     id: 2,
     name: 'Organic Beef Chunks',
     category: 'Dogs',
-    image: '/images/shop/organic-beef-chunks.jpg',
+    image: '/images/shop/organic-beef-chunks.webp',
     price: '22.50',
     description: 'Hearty, organic beef chunks for strong muscles.',
   },
@@ -53,7 +53,7 @@ export const ALL_PRODUCTS = [
     id: 3,
     name: 'Arctic Krill Flakes',
     category: 'Fish',
-    image: '/images/shop/arctic-krill-flakes.jpg',
+    image: '/images/shop/arctic-krill-flakes.webp',
     price: '9.99',
     description: 'Color-enhancing krill flakes for vibrant aquarium life.',
   },
@@ -61,7 +61,7 @@ export const ALL_PRODUCTS = [
     id: 4,
     name: 'Plush Feather Wand',
     category: 'Cats',
-    image: '/images/shop/plush-feather-wand.jpg',
+    image: '/images/shop/plush-feather-wand.webp',
     price: '7.00',
     description:
       "Interactive feather wand to engage your cat's hunting instincts.",
@@ -70,7 +70,7 @@ export const ALL_PRODUCTS = [
     id: 5,
     name: 'Durable Chew Toy',
     category: 'Dogs',
-    image: '/images/shop/durable-chew-toy.jpg',
+    image: '/images/shop/durable-chew-toy.webp',
     price: '12.99',
     description:
       'Built to last, this chew toy is perfect for aggressive chewers.',
@@ -79,39 +79,30 @@ export const ALL_PRODUCTS = [
     id: 6,
     name: 'Sunny Seed Mix',
     category: 'Birds',
-    image: '/images/shop/sunny-seed-mix.jpg',
+    image: '/images/shop/sunny-seed-mix.webp',
     price: '11.25',
     description:
       'A nutritious and delicious seed mix for happy, healthy birds.',
   },
   {
     id: 7,
-    name: 'Silent Spinner Wheel',
-    category: 'Random', // Hamsters, etc.
-    image: '/images/shop/silent-spinner-wheel.jpg',
-    price: '18.00',
-    description: 'Whisper-quiet exercise wheel for hamsters and gerbils.',
-  },
-  {
-    id: 8,
     name: 'Cozy Cat Tree',
     category: 'Cats',
-    image: '/images/shop/cozy-cat-tree.jpg',
+    image: '/images/shop/cozy-cat-tree.webp',
     price: '79.99',
     description:
       'Multi-level cat tree with scratching posts and a comfy hideaway.',
   },
   {
-    id: 9,
+    id: 8,
     name: 'Tough Rope Tug',
     category: 'Dogs',
-    image: '/images/shop/tough-rope-tug.jpg',
+    image: '/images/shop/tough-rope-tug.webp',
     price: '14.50',
     description: 'Durable rope toy for games of tug-of-war with your dog.',
   },
 ];
 
-// Animation variants
 export const ANIMATION_VARIANTS = {
   fadeInUp: {
     initial: { opacity: 0, y: 60 },

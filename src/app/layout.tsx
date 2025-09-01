@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Paws n' Play - Where Every Pet's Dream Comes True",
+  title: "Paws n' Play - A Pets Dream",
   description:
     "Welcome to Paws n' Play, the ultimate destination for pet lovers! Explore our wide range of pet products and services.",
   keywords: 'pet care, dog walking, pet sitting, grooming, pet services',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Paws n' Play",
     images: [
       {
-        url: '/hero-dog-image.jpg',
+        url: '/hero-dog-image.webp',
         width: 1200,
         height: 630,
         alt: "Paws n' Play - Pet Care Services",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Paws n' Play - Premium Pet Care",
-    description: "Where every pet's dream comes true!",
-    images: ['/hero-dog-image.jpg'],
+    description: 'A Pets Dream',
+    images: ['/hero-dog-image.webp'],
   },
   robots: {
     index: true,

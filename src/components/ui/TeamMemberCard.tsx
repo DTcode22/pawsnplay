@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Twitter, Linkedin, Dribbble } from 'lucide-react';
 import type { TeamMember, SocialLink } from '@/types';
+import Image from 'next/image';
 
 const iconMap = {
   twitter: Twitter,
@@ -27,11 +28,13 @@ const SocialIcon = ({ social }: { social: SocialLink }) => {
 export const TeamMemberCard = ({ member }: { member: TeamMember }) => {
   return (
     <div className="flex flex-col gap-6">
-      <div className="w-full aspect-[4/5] overflow-hidden">
-        <img
+      <div className="relative w-full aspect-[4/5] overflow-hidden">
+        <Image
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
       </div>
       <div className="flex flex-col gap-4">

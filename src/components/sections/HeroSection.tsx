@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Container } from '../ui/Container';
+import Image from 'next/image';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,19 +15,19 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-[100vh] overflow-hidden">
-      {/* Background elements - These are full-width */}
       <div className="absolute inset-0">
-        <div
-          className="w-full h-full bg-no-repeat bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/images/hero-dog-cropped2.png')`,
-            backgroundPosition: 'left center',
-          }}
+        <Image
+          src="/images/hero-dog-cropped2.webp"
+          alt="Happy dog sitting in a field"
+          fill
+          priority
+          className="object-cover"
+          style={{ objectPosition: 'top center' }}
+          sizes="100vw"
         />
       </div>
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 right-20 w-4 h-4 bg-white/20 rounded-full"
@@ -55,7 +56,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Content Wrapper - This confines content to the max-width */}
       <Container
         className="relative z-10 flex flex-col justify-center h-full"
         size="custom"
@@ -66,7 +66,6 @@ const Hero = () => {
           transition={{ duration: 0.6, staggerChildren: 0.2 }}
         >
           <div className="max-w-[630px]">
-            {/* Hero Title */}
             <motion.div
               className="mb-8"
               initial={{ opacity: 0, y: 30 }}
@@ -109,7 +108,6 @@ const Hero = () => {
                 </motion.span>
               </motion.h1>
 
-              {/* Description */}
               <motion.p
                 className="text-base md:text-lg font-semibold leading-relaxed text-white max-w-[630px] opacity-95"
                 initial={{ opacity: 0, y: 30 }}
@@ -125,7 +123,6 @@ const Hero = () => {
               </motion.p>
             </motion.div>
 
-            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -168,7 +165,6 @@ const Hero = () => {
               </motion.button>
             </motion.div>
 
-            {/* Additional CTAs */}
             <motion.div
               className="flex items-center gap-6 mt-8"
               initial={{ opacity: 0, y: 20 }}
@@ -224,7 +220,6 @@ const Hero = () => {
         </motion.div>
       </Container>
 
-      {/* Scroll Indicator - Positioned relative to the full-width section */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
@@ -234,7 +229,7 @@ const Hero = () => {
         <motion.div
           className="flex flex-col items-center text-white/60 cursor-pointer hover:text-white/80 transition-colors duration-300"
           onClick={() => {
-            const nextSection = document.querySelector('#shop'); // Target the shop/featured products section
+            const nextSection = document.querySelector('#shop');
             nextSection?.scrollIntoView({ behavior: 'smooth' });
           }}
         >

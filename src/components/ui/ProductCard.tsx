@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { Heart, Plus, Minus, CheckCircle } from 'lucide-react';
 
 interface Product {
@@ -40,10 +41,12 @@ export const ProductCard = ({
 
   return (
     <div className="group relative block w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-      <img
+      <Image
         src={product.image}
         alt={product.name}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-110"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />
       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

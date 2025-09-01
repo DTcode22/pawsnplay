@@ -7,6 +7,7 @@ import { Container } from '@/components/ui/Container';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { VideoModal } from '@/components/ui/VideoModal';
 import { RICH_TEXT_CONTENT } from '@/lib/data';
+import Image from 'next/image';
 
 const VideoSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,10 +61,12 @@ const VideoSection = () => {
                 className="h-[400px] sm:h-[600px] relative rounded-lg overflow-hidden cursor-pointer group"
                 onClick={() => setIsModalOpen(true)}
               >
-                <img
-                  src="/images/thumbnail.jpg"
+                <Image
+                  src="/images/thumbnail.webp"
                   alt="Happy dog looking up"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-black/30"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
