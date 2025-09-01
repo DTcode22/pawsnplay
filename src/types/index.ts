@@ -32,3 +32,15 @@ export interface Testimonial {
   avatar: string;
   rating: number;
 }
+
+export interface SocialLink {
+  platform: 'twitter' | 'linkedin' | 'dribbble';
+  href: string;
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  socials: SocialLink[];
+}
