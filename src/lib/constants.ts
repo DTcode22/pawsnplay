@@ -34,49 +34,80 @@ export const BRAND = {
 
 export const ALL_PRODUCTS = [
   {
+    id: 1,
     name: 'Gourmet Salmon Bites',
     category: 'Cats',
     image: '/images/shop/cat1.png',
+    price: '15.99',
+    description: 'Premium, grain-free salmon bites for a shiny coat.',
   },
   {
+    id: 2,
     name: 'Organic Beef Chunks',
     category: 'Dogs',
     image: '/images/shop/organic-beef-chunks.jpg',
+    price: '22.50',
+    description: 'Hearty, organic beef chunks for strong muscles.',
   },
   {
+    id: 3,
     name: 'Arctic Krill Flakes',
     category: 'Fish',
     image: '/images/shop/arctic-krill-flakes.jpg',
+    price: '9.99',
+    description: 'Color-enhancing krill flakes for vibrant aquarium life.',
   },
   {
+    id: 4,
     name: 'Plush Feather Wand',
     category: 'Cats',
     image: '/images/shop/plush-feather-wand.jpg',
+    price: '7.00',
+    description:
+      "Interactive feather wand to engage your cat's hunting instincts.",
   },
   {
+    id: 5,
     name: 'Durable Chew Toy',
     category: 'Dogs',
     image: '/images/shop/durable-chew-toy.jpg',
+    price: '12.99',
+    description:
+      'Built to last, this chew toy is perfect for aggressive chewers.',
   },
   {
+    id: 6,
     name: 'Sunny Seed Mix',
     category: 'Birds',
     image: '/images/shop/sunny-seed-mix.jpg',
+    price: '11.25',
+    description:
+      'A nutritious and delicious seed mix for happy, healthy birds.',
   },
   {
+    id: 7,
     name: 'Silent Spinner Wheel',
-    category: 'Random',
+    category: 'Random', // Hamsters, etc.
     image: '/images/shop/silent-spinner-wheel.jpg',
+    price: '18.00',
+    description: 'Whisper-quiet exercise wheel for hamsters and gerbils.',
   },
   {
+    id: 8,
     name: 'Cozy Cat Tree',
     category: 'Cats',
     image: '/images/shop/cozy-cat-tree.jpg',
+    price: '79.99',
+    description:
+      'Multi-level cat tree with scratching posts and a comfy hideaway.',
   },
   {
+    id: 9,
     name: 'Tough Rope Tug',
     category: 'Dogs',
     image: '/images/shop/tough-rope-tug.jpg',
+    price: '14.50',
+    description: 'Durable rope toy for games of tug-of-war with your dog.',
   },
 ];
 

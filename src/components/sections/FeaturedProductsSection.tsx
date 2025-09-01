@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { Container } from '../ui/Container';
 import { ScrollReveal } from '../animations/ScrollReveal';
 import { ALL_PRODUCTS } from '@/lib/constants';
+import { ProductCard } from '../ui/ProductCard';
 
 const categories = ['Random', 'Cats', 'Dogs', 'Fish', 'Birds'];
 
@@ -15,14 +16,26 @@ const shuffleAndSlice = (array: typeof ALL_PRODUCTS, count: number) => {
 
 const FeaturedProductsSection = () => {
   const [activeCategory, setActiveCategory] = useState('Random');
+  const [heartedItems, setHeartedItems] = useState<Set<number>>(new Set());
 
   const [displayedProducts, setDisplayedProducts] = useState(() =>
     shuffleAndSlice(ALL_PRODUCTS, 3)
   );
 
+  const handleHeartToggle = (productId: number) => {
+    setHeartedItems((prevHearted) => {
+      const newHearted = new Set(prevHearted);
+      if (newHearted.has(productId)) {
+        newHearted.delete(productId);
+      } else {
+        newHearted.add(productId);
+      }
+      return newHearted;
+    });
+  };
+
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
-
     if (category === 'Random') {
       setDisplayedProducts(shuffleAndSlice(ALL_PRODUCTS, 3));
     } else {
@@ -70,31 +83,18 @@ const FeaturedProductsSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[24rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProducts.length > 0 ? (
             displayedProducts.map((product) => (
-              <div
-                key={product.name}
-                className="group relative block w-full h-96 rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-2xl font-bold text-white">
-                    {product.name}
-                  </h3>
-                  <p className="text-yellow-300 font-semibold mt-1">
-                    For {product.category}
-                  </p>
-                </div>
-              </div>
+              <ProductCard
+                key={product.id}
+                product={product}
+                isHearted={heartedItems.has(product.id)}
+                onHeartToggle={handleHeartToggle}
+              />
             ))
           ) : (
-            <div className="col-span-full flex flex-col items-center justify-center text-center text-gray-500 h-full">
+            <div className="col-span-full flex flex-col items-center justify-center text-center text-gray-500 h-full min-h-[24rem]">
               <span className="text-4xl mb-4">🐾</span>
               <p className="text-xl font-medium">
                 No products found in this category yet!
