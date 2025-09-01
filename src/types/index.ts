@@ -51,3 +51,12 @@ export interface RichTextContent {
   subHeading: string;
   subParagraph: string;
 }
+export interface FooterLinkMap {
+  [key: string]: string[];
+}
+
+export interface FooterSocialLink {
+  icon: React.ElementType;
+  href: string;
+  label: string;
+}

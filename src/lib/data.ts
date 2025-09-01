@@ -1,4 +1,18 @@
-import type { ServiceItem, TeamMember, RichTextContent } from '@/types';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Github,
+} from 'lucide-react';
+import type {
+  ServiceItem,
+  TeamMember,
+  RichTextContent,
+  FooterLinkMap,
+  FooterSocialLink,
+} from '@/types';
 
 export const ALL_SERVICES: ServiceItem[] = [
   {
@@ -69,3 +83,19 @@ export const RICH_TEXT_CONTENT: RichTextContent = {
   subParagraph:
     'Driven by our passion for animal welfare, we hand-select each product and service with meticulous attention to quality and sustainability. From nutritious food and enriching toys to expert grooming and healthcare, every offering is carefully curated to meet the unique needs of our beloved furry friends.',
 };
+export const FOOTER_LINKS: FooterLinkMap = {
+  product: ['Overview', 'Features', 'Solutions', 'Tutorials', 'Pricing'],
+  company: ['About us', 'Careers', 'Press', 'News', 'Contact'],
+  resources: ['Blog', 'Events', 'Help centre', 'Tutorials', 'Support'],
+  legal: ['Terms', 'Privacy', 'Cookies', 'Licenses', 'Settings'],
+  social: ['Twitter', 'LinkedIn', 'Facebook', 'GitHub', 'YouTube'],
+};
+
+export const FOOTER_SOCIALS: FooterSocialLink[] = [
+  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Youtube, href: '#', label: 'YouTube' },
+  { icon: Instagram, href: '#', label: 'Instagram' },
+];

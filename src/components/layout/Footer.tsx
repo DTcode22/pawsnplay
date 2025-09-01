@@ -1,37 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
-  Github,
-} from 'lucide-react';
-import { Container } from '../ui/Container';
-
-const footerLinks = {
-  product: ['Overview', 'Features', 'Solutions', 'Tutorials', 'Pricing'],
-  company: ['About us', 'Careers', 'Press', 'News', 'Contact'],
-  resources: ['Blog', 'Events', 'Help centre', 'Tutorials', 'Support'],
-  legal: ['Terms', 'Privacy', 'Cookies', 'Licenses', 'Settings'],
-};
-
-const socialLinks = [
-  { icon: Twitter, href: '#' },
-  { icon: Linkedin, href: '#' },
-  { icon: Facebook, href: '#' },
-  { icon: Github, href: '#' },
-  { icon: Youtube, href: '#' },
-  { icon: Instagram, href: '#' },
-];
+import { Container } from '@/components/ui/Container';
+import { FOOTER_LINKS, FOOTER_SOCIALS } from '@/lib/data';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <Container size="custom" className="py-16">
-        {/* Newsletter Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pb-12 border-b border-white/20">
           <div>
             <h3 className="text-xl font-semibold">Join our newsletter</h3>
@@ -56,7 +32,6 @@ const Footer = () => {
           </form>
         </div>
 
-        {/* Links Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 pr-8">
             <div className="flex items-center gap-3">
@@ -68,7 +43,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {Object.entries(footerLinks).map(([title, links]) => (
+          {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
               <h4 className="font-semibold capitalize text-gray-300 mb-4">
                 {title}
@@ -89,16 +64,16 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Bar */}
         <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/20">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Paws n&apos; Play. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            {socialLinks.map((social, index) => (
+            {FOOTER_SOCIALS.map((social) => (
               <motion.a
-                key={index}
+                key={social.label}
                 href={social.href}
+                aria-label={social.label}
                 className="text-gray-500 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, y: -2 }}
               >
