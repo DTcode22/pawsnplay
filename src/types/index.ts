@@ -19,6 +19,11 @@ export interface Service {
   features: string[];
 }
 
+export interface ServiceItem {
+  name: string;
+  image: string;
+}
+
 export interface Testimonial {
   id: string;
   name: string;
