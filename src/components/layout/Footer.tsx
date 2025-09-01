@@ -61,10 +61,10 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-4 lg:col-span-1 pr-8">
             <div className="flex items-center gap-3">
               <div className="text-2xl">🐾</div>
-              <span className="text-xl font-bold">Paws n' Play</span>
+              <span className="text-xl font-bold">Paws n&apos; Play</span>
             </div>
             <p className="mt-4 text-gray-400">
-              Where every pet's dream comes true.
+              Where every pet&apos;s dream comes true.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/20">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Paws n' Play. All rights reserved.
+            © {new Date().getFullYear()} Paws n&apos; Play. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             {socialLinks.map((social, index) => (

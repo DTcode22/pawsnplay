@@ -60,7 +60,7 @@ const Navbar = () => {
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}
             >
-              Paws n' Play
+              Paws n&apos; Play
             </span>
           </motion.div>
 

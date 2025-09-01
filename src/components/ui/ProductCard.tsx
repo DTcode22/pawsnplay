@@ -95,7 +95,7 @@ export const ProductCard = ({
             <motion.button
               onClick={handleDecrement}
               whileTap={{ scale: 0.85 }}
-              className="focus:outline-none"
+              className="focus:outline-none cursor-pointer"
             >
               <Minus size={20} />
             </motion.button>
@@ -103,7 +103,7 @@ export const ProductCard = ({
             <motion.button
               onClick={handleIncrement}
               whileTap={{ scale: 0.85 }}
-              className="focus:outline-none"
+              className="focus:outline-none cursor-pointer"
             >
               <Plus size={20} />
             </motion.button>
@@ -111,7 +111,7 @@ export const ProductCard = ({
           <motion.button
             onClick={handleAddToCart}
             whileTap={{ scale: 0.95 }}
-            className="flex-grow sm:flex-grow-0 w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#101828] to-[#233250] rounded-lg text-white text-lg font-semibold shadow-[5px_4px_4px_rgba(0,0,0,0.25)]"
+            className="flex-grow sm:flex-grow-0 cursor-pointer w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#101828] to-[#233250] rounded-lg text-white text-lg font-semibold shadow-[5px_4px_4px_rgba(0,0,0,0.25)]"
           >
             Add to cart
           </motion.button>

@@ -32,16 +32,16 @@ const VideoSection = () => {
                 A Tale of Wagging Tails
               </h3>
               <p>
-                Discover the heart and soul behind Paws n' Play. Our journey is
-                one of passion, dedication, and an endless love for animals.
+                Discover the heart and soul behind Paws n&apos;Play. Our journey
+                is one of passion, dedication, and an endless love for animals.
                 Watch our story to see how a small dream grew into a thriving
                 community for pet lovers everywhere.
               </p>
               <p>
                 We believe every pet deserves the best. From our carefully
                 selected products to our compassionate services, every aspect of
-                Paws n' Play is designed to enrich the lives of pets and their
-                families.
+                Paws n&apos; Play is designed to enrich the lives of pets and
+                their families.
               </p>
               <motion.button
                 onClick={() => setIsModalOpen(true)}

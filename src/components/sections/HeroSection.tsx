@@ -96,7 +96,7 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Where Every Pet's
+                  Where Every Pet&apos;s
                 </motion.span>
                 <br />
                 <motion.span
@@ -117,11 +117,11 @@ const Hero = () => {
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                Welcome to Paws n' Play, the ultimate destination for pet
+                Welcome to Paws n&apos; Play, the ultimate destination for pet
                 lovers! Explore a world of tail-wagging joy and furry
                 companionship with our wide range of products and services. From
-                pampering essentials to playful toys, we're here to make every
-                moment with your pet pawsitively perfect!
+                pampering essentials to playful toys, we&apos;re here to make
+                every moment with your pet pawsitively perfect!
               </motion.p>
             </motion.div>
 
